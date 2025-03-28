@@ -1,15 +1,15 @@
 # 尚硅谷阿里巴巴微服务快速通关
 
 ## 版本对比
-![project-version.png](doc/img/project/project-version.png)
+![project-version.png](img/project/project-version.png)
 
 ## 创建 cloud-demo 和 service 管理两个服务
 创建模块
-![project-module.png](doc/img/project/project-module.png)
+![project-module.png](img/project/project-module.png)
 
 整体模块 
 
-![project-service.png](doc/img/project/project-service.png)
+![project-service.png](img/project/project-service.png)
 
 ### cloud-demo pom文件详情
 ```xml
@@ -77,7 +77,7 @@
 </dependencies>
 ```
 ## nacos 注册发现
-![nacos-config.png](doc/img/nacos/nacos-config.png)
+![nacos-config.png](img/nacos/nacos-config.png)
 创建一个主启动
 ```java
 @SpringBootApplication
@@ -97,13 +97,13 @@ server.port=8000
 spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
 ```
 集群效果，修改端口号启动服务
-![service-cluster-config.png](doc/img/nacos/service-cluster-config.png)
+![service-cluster-config.png](img/nacos/service-cluster-config.png)
 
 nacos 效果
-![cluster-instance.png](doc/img/nacos/cluster-instance.png)
+![cluster-instance.png](img/nacos/cluster-instance.png)
 
 ## nacos 服务发现
-![img.png](doc/img/nacos/service-discovery.png)
+![img.png](img/nacos/service-discovery.png)
 - 注解 @EnableDiscveryClient
 - 对象 DiscoveryClient 或 NacosServiceDiscovery
 
@@ -155,4 +155,4 @@ public class DiscoveryTest {
 ```
 输出结果
 
-![instance-result.png](doc/img/nacos/instance-result.png)
+![instance-result.png](img/nacos/instance-result.png)
