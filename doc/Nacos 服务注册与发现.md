@@ -1,10 +1,11 @@
 # 尚硅谷阿里巴巴微服务快速通关
 
-## 版本对比
+## 版本确定
 ![project-version.png](img/project/project-version.png)
 
 ## 创建 cloud-demo 和 service 管理两个服务
 创建模块
+
 ![project-module.png](img/project/project-module.png)
 
 整体模块 
@@ -78,6 +79,7 @@
 ```
 ## nacos 注册发现
 ![nacos-config.png](img/nacos/nacos-config.png)
+
 创建一个主启动
 ```java
 @SpringBootApplication
