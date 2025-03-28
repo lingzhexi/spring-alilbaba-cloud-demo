@@ -15,3 +15,8 @@ spring:
     import:
       - nacos:common.properties?group=order
       - nacos:database.properties?group=order
+
+# 官网配置：https://docs.spring.io/spring-cloud-openfeign/reference/spring-cloud-openfeign.html#feign-logging
+logging:
+  level:
+    com.example.order.feign: debug
