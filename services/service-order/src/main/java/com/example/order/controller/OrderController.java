@@ -19,7 +19,7 @@ public class OrderController {
 
     @GetMapping("/config")
     public String getConfig() {
-        return orderProperties.getTimeout() + "：" + orderProperties.getAutoConfirm();
+        return orderProperties.getTimeout() + "：" + orderProperties.getAutoConfirm() + "：" + orderProperties.getDbUrl();
     }
 
     @GetMapping("/order")
