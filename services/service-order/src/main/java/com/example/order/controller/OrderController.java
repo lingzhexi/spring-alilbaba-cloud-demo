@@ -22,7 +22,7 @@ public class OrderController {
         return orderProperties.getTimeout() + "：" + orderProperties.getAutoConfirm() + "：" + orderProperties.getDbUrl();
     }
 
-    @GetMapping("/order")
+    @GetMapping("/create")
     public Order createOrder(@RequestParam("userId") Long userId,
                              @RequestParam("productId") Long productId) {
         Order order = orderService.createOrder(userId, productId);

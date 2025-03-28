@@ -7,6 +7,7 @@ import com.example.order.bean.Order;
 import com.example.order.feign.ProductFeignClient;
 import com.example.order.service.OrderService;
 import com.example.product.bean.Product;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -27,7 +28,8 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     ProductFeignClient productFeignClient;
 
-    public Order createOrder(Long productId,Long userId) {
+    @SneakyThrows
+    public Order createOrder(Long productId, Long userId) {
 //        Product product = getProduct(productId);
         Product product = productFeignClient.getProductById(productId);
         Order order = new Order();
