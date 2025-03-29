@@ -9,8 +9,8 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration
 public class OrderConfig {
-
-    @Bean
+    // fallback 兜底返回的时候先注销 @Bean 注解
+//    @Bean
     Retryer retryer() {
         return new Retryer.Default();
     }

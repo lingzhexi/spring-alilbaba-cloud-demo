@@ -13,3 +13,10 @@ spring:
             read-timeout: 5000
 #            request-interceptors: # openfeign 请求拦截器
 #              - com.example.cloud.feign.interceptor.XTokenRequestInterceptor
+#            retryer: feign.retryer.DefaultRetryer # 默认重拾机制
+
+feign:
+  sentinel:
+    enabled: true # 开启sentinel
+  fallback:
+    enabled: true # 开启feign的fallback
