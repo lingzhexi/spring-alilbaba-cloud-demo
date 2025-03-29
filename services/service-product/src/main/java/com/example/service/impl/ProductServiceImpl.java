@@ -20,7 +20,7 @@ public class ProductServiceImpl implements ProductService {
         product.setPrice(new BigDecimal("99"));
         product.setProductName("苹果-" + product);
         product.setNum(2);
-        TimeUnit.SECONDS.sleep(100);
+//        TimeUnit.SECONDS.sleep(100);
         return product;
     }
 }
