@@ -15,7 +15,7 @@
 
 远程调用负载均衡
 
-![img.png](img.png)
+![img.png](doc/img/openFeign/loadbalancer.png)
 
 nacos 总结
-![img_1.png](img_1.png)
+![img_1.png](doc/img/nacos/nacos-总结.png)

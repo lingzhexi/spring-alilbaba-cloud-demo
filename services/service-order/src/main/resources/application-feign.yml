@@ -11,6 +11,10 @@ spring:
             logger-level: full
             connect-timeout: 3000
             read-timeout: 5000
+    sentinel:
+      transport:
+        dashboard: localhost:8080 # sentinel控制台地址
+      eager: true # 由于sentinel 属于懒加载只有请求的时候才能看到实例服务，开启Sentinel的 eager 模式，在应用启动时初始化 Sentinel
 #            request-interceptors: # openfeign 请求拦截器
 #              - com.example.cloud.feign.interceptor.XTokenRequestInterceptor
 #            retryer: feign.retryer.DefaultRetryer # 默认重拾机制

@@ -18,7 +18,7 @@ public class ProductServiceImpl implements ProductService {
         Product product = new Product();
         product.setId(productId);
         product.setPrice(new BigDecimal("99"));
-        product.setProductName("苹果-" + product);
+        product.setProductName("苹果-" + productId);
         product.setNum(2);
 //        TimeUnit.SECONDS.sleep(100);
         return product;
