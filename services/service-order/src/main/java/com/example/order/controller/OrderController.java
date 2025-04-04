@@ -23,7 +23,6 @@ public class OrderController {
         return orderProperties.getTimeout() + "：" + orderProperties.getAutoConfirm() + "：" + orderProperties.getDbUrl();
     }
 
-    @SentinelResource(value = "createOrder")
     @GetMapping("/create")
     public Order createOrder(@RequestParam("userId") Long userId,
                              @RequestParam("productId") Long productId) {
