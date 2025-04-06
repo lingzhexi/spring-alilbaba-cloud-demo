@@ -61,7 +61,7 @@ public class OrderServiceImpl implements OrderService {
         order.setTotalAmount(new BigDecimal("0"));
         order.setUserId(userId);
         order.setNickName("未知用户");
-        order.setAddress("异常信息：" + e.getMessage());
+        order.setAddress("异常信息：" + e.getClass());
         return order;
     }
 

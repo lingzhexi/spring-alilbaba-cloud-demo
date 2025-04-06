@@ -1,6 +1,5 @@
 package com.example.order.controller;
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.example.order.bean.Order;
 import com.example.order.properties.OrderProperties;
 import com.example.order.service.OrderService;
@@ -28,5 +27,23 @@ public class OrderController {
                              @RequestParam("productId") Long productId) {
         Order order = orderService.createOrder(userId, productId);
         return order;
+    }
+
+    @GetMapping("/seckill")
+    public Order seckill(@RequestParam("userId") Long userId,
+                             @RequestParam("productId") Long productId) {
+        Order order = orderService.createOrder(userId, productId);
+        order.setId(Long.MAX_VALUE);
+        return order;
+    }
+
+    @GetMapping("/writeDb")
+    public String writeDb() {
+        return "writeDb success.....";
+    }
+
+    @GetMapping("/readDb")
+    public String readDb() {
+        return "readDb success.....";
     }
 }
