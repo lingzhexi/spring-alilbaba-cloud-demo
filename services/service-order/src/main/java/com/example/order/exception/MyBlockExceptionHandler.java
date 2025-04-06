@@ -16,6 +16,7 @@ public class MyBlockExceptionHandler implements BlockExceptionHandler {
 
     @Override
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse response, String resourceName, BlockException e) throws Exception {
+        response.setStatus(429); //to many request
         response.setContentType("application/json;charset=UTF-8");
         PrintWriter writer = response.getWriter();
         R error = R.error(500, resourceName + "被sentinel 限制了，原因：" + e.getClass ());
