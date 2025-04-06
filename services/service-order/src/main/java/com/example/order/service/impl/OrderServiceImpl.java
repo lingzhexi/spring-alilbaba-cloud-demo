@@ -33,7 +33,7 @@ public class OrderServiceImpl implements OrderService {
 
     @SentinelResource(value = "createOrder", blockHandler = "createOrderFallback")
     @Override
-    public Order createOrder(Long productId, Long userId) {
+    public Order createOrder(Long userId, Long productId) {
 //        Product product = getProduct(productId);
 
         //使用Feign完成远程调用
