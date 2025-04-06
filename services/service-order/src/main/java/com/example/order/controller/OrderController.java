@@ -1,7 +1,6 @@
 package com.example.order.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.example.order.bean.Order;
 import com.example.order.properties.OrderProperties;
 import com.example.order.service.OrderService;
@@ -42,7 +41,7 @@ public class OrderController {
         return order;
     }
 
-    public Order seckillFallback(Long userId, Long productId, BlockException e) {
+    public Order seckillFallback(Long userId, Long productId, Throwable e) {
         System.out.println("seckillFallback.....");
         Order order = new Order();
         order.setId(productId);
