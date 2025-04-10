@@ -1,0 +1,31 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: bing-route
+          uri: https://cn.bing.com
+          predicates:
+            - name: Path
+              args:
+                pattern: /search
+            - name: Query
+              args:
+                param: q
+                regexp: haha
+
+          order: 10
+          metadata:
+            hello: world
+        - id: order-route
+          uri: lb://service-order
+          predicates:
+            - name: Path  #PathRoutePredicateFactory
+              args:
+                pattern: /api/order/**
+                matchTrailingSlash: true
+          order: 1
+        - id: product-route
+          uri: lb://service-product
+          predicates:
+            - Path=/api/product/**
+          order: 2
