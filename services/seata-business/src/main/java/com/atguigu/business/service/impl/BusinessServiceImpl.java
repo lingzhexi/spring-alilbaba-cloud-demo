@@ -18,7 +18,6 @@ public class BusinessServiceImpl implements BusinessService {
     OrderFeignClient orderFeignClient;
 
 
-    @Transactional
     @Override
     public void purchase(String userId, String commodityCode, int orderCount) {
         //1. 扣减库存
