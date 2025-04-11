@@ -1,0 +1,2 @@
+https://lark-assets-prod-aliyun.oss-cn-hangzhou.aliyuncs.com/yuque/0/2025/gz/1613913/1736420650170-1143baab-fbe9-4114-b7e0-515349276444.gz?OSSAccessKeyId=LTAI4GKnqTWmz2X8mzA1Sjbv&Expires=1744335095&Signature=nj9GwCRe7FGvrrqawPl1xGg0Nr0=&response-content-disposition=attachment;filename*=UTF-8''apache-seata-2.1.0-incubating-bin.tar.gz
+可以浏览器下载

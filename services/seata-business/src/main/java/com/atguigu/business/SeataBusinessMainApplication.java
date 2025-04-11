@@ -7,7 +7,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @EnableFeignClients(basePackages= "com.atguigu.business.feign")
-@EnableTransactionManagement
 @EnableDiscoveryClient
 @SpringBootApplication
 public class SeataBusinessMainApplication {
